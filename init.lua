@@ -1,5 +1,18 @@
 -- This small mod adds some new recipes for
 -- the techage chemistry to produce biofuel
+biooil = {}
+
+biooil.S = nil
+
+if(minetest.get_translator ~= nil) then
+    biooil.S = minetest.get_translator(minetest.get_current_modname())
+
+else
+    biooil.S = function ( s ) return s end
+
+end
+
+local S = biooil.S#
 
 minetest.register_craftitem(":techage:biooil", {
 	description = S("Biooil"),
@@ -44,21 +57,27 @@ techage.register_liquid("techage:canister_biooil", "techage:ta3_canister_empty",
 minetest.register_craft({
    output = "techage:canister_biooil 1",
    recipe = {
-      {"techage:ta3_canister_empty", "cucina_vegana:seed_lettuce", "cucina_vegana:seed_lettuce"},
+      {"cucina_vegana:seed_lettuce", "cucina_vegana:seed_lettuce", "cucina_vegana:seed_lettuce"},
+      {"cucina_vegana:seed_lettuce", "cucina_vegana:seed_lettuce", "cucina_vegana:seed_lettuce"},
+      {"", "techage:ta3_canister_empty", ""},
    }
 })
 
 minetest.register_craft({
    output = "techage:canister_biooil 1",
    recipe = {
-      {"techage:ta3_canister_empty", "cucina_vegana:seed_sunflower", "cucina_vegana:seed_lettuce"},
+      {"cucina_vegana:seed_sunflower", "cucina_vegana:seed_sunflower", "cucina_vegana:seed_sunflower"},
+      {"cucina_vegana:seed_sunflower", "cucina_vegana:seed_sunflower", "cucina_vegana:seed_sunflower"},
+      {"", "techage:ta3_canister_empty", ""},
    }
 })
 
 minetest.register_craft({
    output = "techage:canister_biooil 1",
    recipe = {
-      {"techage:ta3_canister_empty", "cucina_vegana:seed_flax", "cucina_vegana:seed_lettuce"},
+      {"cucina_vegana:seed_flax", "cucina_vegana:seed_flax", "cucina_vegana:seed_flax"},
+      {"cucina_vegana:seed_flax", "cucina_vegana:seed_flax", "cucina_vegana:seed_flax"},
+      {"", "techage:ta3_canister_empty", ""},
    }
 })
 
