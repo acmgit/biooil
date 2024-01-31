@@ -12,7 +12,7 @@ else
 
 end
 
-local S = biooil.S#
+local S = biooil.S
 
 minetest.register_craftitem(":techage:biooil", {
 	description = S("Biooil"),
