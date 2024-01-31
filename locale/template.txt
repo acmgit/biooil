@@ -1,0 +1,4 @@
+# textdomain: biooil
+Biooil=
+Biooil Barrel=
+Biooil Canister=
