@@ -21,7 +21,7 @@ minetest.register_craftitem(":techage:canister_biooil", {
 
 
 techage.recipes.add("ta4_doser", {
-	output = "biofuel:phial_fuel 1",
+	output = "biofuel:phial_fuel 3",
 	input = {
 		"techage:water 1",
 		"techage:needle_powder 1",
@@ -30,7 +30,7 @@ techage.recipes.add("ta4_doser", {
 })
 
 techage.recipes.add("ta4_doser", {
-	output = "biofuel:phial_fuel 1",
+	output = "biofuel:phial_fuel 3",
 	input = {
 		"techage:water 1",
 		"techage:leave_powder 1",
